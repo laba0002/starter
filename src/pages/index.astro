@@ -4,9 +4,173 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-	</article>
+	<section class="grid md:grid-cols-5 p-8 relative">
+		<img src="https://picsum.photos/seed/picsum/800/600" alt="" class="col-span-3">
+	<div class="col-span-2 grid content-center">
+		<h1></h1>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum odit pariatur explicabo assumenda molestiae, iusto blanditiis ipsa necessitatibus rem magnam architecto, quos, eaque accusamus molestias numquam? Ex mollitia unde labore.</p>
+		<Button class="">Klik!</Button>
+	</div>
+</section>
+
+<section>
+	<div></div>
+	<div></div>
+</section>
+
+<section class="grid md:grid-cols-3 p-8 ">
+	<div>
+		<img src="https://picsum.photos/seed/picsum/200" alt="">
+	</div>
+	<div>
+		<img src="https://picsum.photos/seed/picsum/200" alt="">
+	</div>
+	<div>
+		<img src="https://picsum.photos/seed/picsum/200" alt="">
+	</div>
+</section>
+
+<section>
+	<h1>Kapitlerne</h1>
+	<div class="flex flex-wrap">
+		<div>
+			<h2>kapitel x</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, cupiditate sapiente laudantium consectetur itaque sed quas delectus necessitatibus deserunt architecto vitae id. Optio at adipisci ex. Quasi soluta libero facilis.</p>
+		</div>
+		<div>
+			<h2>kapitel x</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, cupiditate sapiente laudantium consectetur itaque sed quas delectus necessitatibus deserunt architecto vitae id. Optio at adipisci ex. Quasi soluta libero facilis.</p>
+		</div>
+		<div>
+			<h2>kapitel x</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, cupiditate sapiente laudantium consectetur itaque sed quas delectus necessitatibus deserunt architecto vitae id. Optio at adipisci ex. Quasi soluta libero facilis.</p>
+		</div>
+		<div>
+			<h2>kapitel x</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, cupiditate sapiente laudantium consectetur itaque sed quas delectus necessitatibus deserunt architecto vitae id. Optio at adipisci ex. Quasi soluta libero facilis.</p>
+		</div>
+		<div>
+			<h2>kapitel x</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, cupiditate sapiente laudantium consectetur itaque sed quas delectus necessitatibus deserunt architecto vitae id. Optio at adipisci ex. Quasi soluta libero facilis.</p>
+		</div>
+		<div>
+			<h2>kapitel x</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, cupiditate sapiente laudantium consectetur itaque sed quas delectus necessitatibus deserunt architecto vitae id. Optio at adipisci ex. Quasi soluta libero facilis.</p>
+		</div>
+		<div>
+			<h2>kapitel x</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, cupiditate sapiente laudantium consectetur itaque sed quas delectus necessitatibus deserunt architecto vitae id. Optio at adipisci ex. Quasi soluta libero facilis.</p>
+		</div>
+		<div>
+			<h2>kapitel x</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, cupiditate sapiente laudantium consectetur itaque sed quas delectus necessitatibus deserunt architecto vitae id. Optio at adipisci ex. Quasi soluta libero facilis.</p>
+		</div>
+	</div>
+</section>
+
+<section>
+	<h1>Anmeldelser af bogen</h1>
+
+	<div class="flex flex-row">
+		<div>
+			<p>5 ud af 6 stjerner (ikoner indsæt)</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatibus quaerat fuga ratione id dolor, inventore perspiciatis fugit neque minima autem non voluptas laborum totam est! Nesciunt doloribus ut commodi.</p>
+		</div>
+	
+		<div>
+			<p>5 ud af 6 stjerner (ikoner indsæt)</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatibus quaerat fuga ratione id dolor, inventore perspiciatis fugit neque minima autem non voluptas laborum totam est! Nesciunt doloribus ut commodi.</p>
+		</div>
+	
+		<div>
+			<p>5 ud af 6 stjerner (ikoner indsæt)</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatibus quaerat fuga ratione id dolor, inventore perspiciatis fugit neque minima autem non voluptas laborum totam est! Nesciunt doloribus ut commodi.</p>
+		</div>
+	
+		<div>
+			<p>5 ud af 6 stjerner (ikoner indsæt)</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatibus quaerat fuga ratione id dolor, inventore perspiciatis fugit neque minima autem non voluptas laborum totam est! Nesciunt doloribus ut commodi.</p>
+		</div>
+	</div>
+</section>
+
+<section>
+	<h1>Galleri</h1>
+
+	<div class="grid grid-cols-4">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+	</div>
+</section>
+
+<section>
+<div>
+	<h1>Forfatteren</h1>
+	<img src="" alt="">
+</div>
+	<p>bio</p>
+</section>
+
+<section>
+	<h1> Køb bogen nu!</h1>
+	<form action=""  class="grid grid-cols-1 gap-6 mt-8 max-w-md">
+		<div class="block">
+			<label for="antal">Antal:</label>
+			<input type="number" id="antal" placeholder="1" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+		</div>
+
+		<div class="block">
+			<span>Levering:</span>
+			<input type="radio" id="postnord" name="levering" checked class="appearance-none checked:bg-pink-500">
+			<label for="postnord">Postnord</label>
+			<input type="radio" id="afhent" name="levering">
+			<label for="afhent">Afhent selv</label>
+		</div>
+
+		<div class="block">
+			<label for="navn">Navn:</label>
+			<input type="text" id="navn" placeholder="Anders And" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+		</div>
+
+		<div class="block">
+			<label for="adresse">Adresse</label>
+			<input type="text" id="adresse" placeholder="Paradisæblevej 8" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+		</div>
+		<div class="block">
+			<label for="email">Email:</label>
+			<input type="email" id="email" placeholder="E-mail" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+		</div>
+
+		<div class="block">
+			<label for="by" for="postnummer">Postnummer og by</label>
+			<input type="text" id="postnummer" placeholder="0900" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+			<input type="text" id="by" placeholder="Andeby" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+		</div>
+
+		<div class="block">
+			<label for="telefon">Telefon:</label>
+			<input type="tel" id="telefon" placeholder="555-555" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+		</div>
+
+		<div class="block">
+			<input type="checkbox" class="rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-gray-700  hover:bg-red-50 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500">
+			<span>Ja tak til nyhedsbreve og tilbud</span>
+		</div>
+
+		<div class="block">
+			<Button type="sumbit" variant="primary" size="small">Køb bog</Button>
+		</div>
+	</form>
+</section>
+
 </MainLayout>
