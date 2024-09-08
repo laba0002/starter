@@ -3,40 +3,41 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
+import 'animate.css';
 
 const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files => {
   return files.map(file => file.default);
 });
 ---
 <MainLayout title="Titel">
-	<section class="grid md:grid-cols-5 p-8 relative">
+	<section class="grid md:grid-cols-5 p-8 relative section1">
 		<img src="/src/assets/images/billeder/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg" alt="" class="col-span-3">
-	<div class="col-span-2 grid content-center">
-		<h1>Københavnerbilleder - en guide til hipster foto</h1>
-		<span>af Sten Simons</span>
+	<div class="col-span-2 grid content-center md:ml-6">
+		<h1 class=" text-xl mb-4 lg:text-5xl">Københavnerbilleder - en guide til hipster foto</h1>
+		<span class="mb-4 italic">af Sten Simons</span>
 <p>Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!	 </p>		
-<Button class="">Klik!</Button>
+<Button class="" variant="primary" size="medium">Køb her</Button>
 	</div>
 </section>
 
-<section class="grid grid-cols-2 p-8 max-w-7xl mx-auto">
-	<div class="text-right">
+<section class="grid grid-cols-2 p-8 max-w-7xl mx-auto section2">
+	<div class="lg:text-right m-8">
 		<ol>
-			<li>Titel: Københavnerbilleder - en guide til hipster foto</li>
-			<li >Forfatter: Sten Simons</li>
-			<li >Antal sider: 344</li>
+			<li><b>Titel:</b> Københavnerbilleder - en guide til hipster foto</li>
+			<li><b>Forfatter:</b> Sten Simons</li>
+			<li ><b>Antal sider:</b> 344</li>
 		</ol>
 	</div>
 	<div>
-		<ol>
-			<li>Forlag: Mellem Linjerne</li>
-			<li>ISBN: 987-6-987654-32-1</li>
-			<li>Pris: 399.-</li>
+		<ol class="m-8">
+			<li><b>Forlag:</b> Mellem Linjerne</li>
+			<li><b>ISBN:</b> 987-6-987654-32-1</li>
+			<li><b>Pris:</b> 399.-</li>
 		</ol>
 	</div>
 </section>
 
-<section class="grid md:grid-cols-3 p-8 max-w-7xl mx-auto">
+<section class="grid grid-cols-3 p-8 max-w-7xl mx-auto section3">
 	<div>
 		<img src="/src/assets/images/billeder/kobenhavnerbilleder_oppefra.jpg" alt="">
 	</div>
@@ -50,59 +51,59 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 	</div>
 </section>
 
-<section class="max-w-7xl mx-auto p-8">
-	<h1>Kapitlerne</h1>
+<section class="max-w-7xl mx-auto p-8 section4">
+	<h1 class="text-2xl mb-4 ml-8">Kapitlerne</h1>
 	<div class="grid lg:grid-cols-2 lg:grid-rows-4 gap-4 p-8">
 
 			<div>
-				<h2>Kapitel 1 - Intro til street foto</h2>
+				<h2 class="text-lg text-orange-800">Kapitel 1 - Intro til street foto</h2>
 				<p>Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos.</p>		
 			</div>
 		
 			<div>
-				<h2>Kapitel 2 - Om at skyde street</h2>
+				<h2 class="text-lg text-orange-800">Kapitel 2 - Om at skyde street</h2>
 				<p>Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet.</p>
 			
 			</div>
 			<div>
-				<h2>Kapitel 3 - Om at finde det rette motiv</h2>
+				<h2 class="text-lg text-orange-800">Kapitel 3 - Om at finde det rette motiv</h2>
 				<p>Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver.</p>
 			
 			</div>
 			<div>
-				<h2>Kapitel 4 - Digital street foto</h2>
+				<h2 class="text-lg text-orange-800">Kapitel 4 - Digital street foto</h2>
 				<p> De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto. 		</p>	
 			</div>
 	
 			<div>
-				<h2>Kapitel 5 - Analog street foto</h2>
+				<h2 class="text-lg text-orange-800">Kapitel 5 - Analog street foto</h2>
 				<p>Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto. </p>		
 				
 			</div>
 			<div>
-				<h2>Kapitel 6 - Om at skyde sort/hvid</h2>
+				<h2 class="text-lg text-orange-800">Kapitel 6 - Om at skyde sort/hvid</h2>
 				<p>Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering. 
 				</p>
 			
 			</div>
 			<div>
-				<h2>Kapitel 7 - Kreative teknikker </h2>
+				<h2 class="text-lg text-orange-800">Kapitel 7 - Kreative teknikker </h2>
 				<p>Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker! </p>
 			
 			</div>
 	<div>
-				<h2>Kapitel 8 - Kom helt tæt på! </h2>
+				<h2 class="text-lg text-orange-800">Kapitel 8 - Kom helt tæt på! </h2>
 				<p>Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf… </p>
 	</div>
 	</div>
 </section>
 
-<section class="max-w-7xl mx-auto p-8">
-	<h1>Anmeldelser af bogen</h1>
+<section class="section5 max-w-7xl mx-auto p-8">
+	<h1 class="text-2xl mb-4">Anmeldelser af bogen</h1>
 
-	<div class="grid grid-cols-3 g-4">
-		<div>
-			<div class="flex flex-row">
+	<div class="grid md:grid-cols-3 gap-x-4">
+		<div class="bg-white rounded shadow-lg my-4 p-8">
+			<div class="flex flex-row ">
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z"/></svg>
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z"/></svg>
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z"/></svg>
@@ -111,10 +112,10 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z"/></svg>
 			</div>
 			<p>Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
-			<span>- Hanne Hovgaard, Berlingeren </span>
+			<span class="italic ">- Hanne Hovgaard, Berlingeren </span>
 		</div>
 	
-		<div>
+		<div class="bg-white rounded shadow-lg my-4 p-8">
 			<div class="flex flex-row">
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z"/></svg>
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z"/></svg>
@@ -123,10 +124,10 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m12 15.39l-3.76 2.27l.99-4.28l-3.32-2.88l4.38-.37L12 6.09l1.71 4.04l4.38.37l-3.32 2.88l.99 4.28M22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.45 4.73L5.82 21L12 17.27L18.18 21l-1.64-7.03z"/></svg>
 			</div>
 			<p>Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?</p>
-			<span>- Kim Kloggaard, Fotojournalen.dk</span>
+			<span class="italic ">- Kim Kloggaard, Fotojournalen.dk</span>
 		</div>
 	
-		<div>
+		<div class="bg-white rounded shadow-lg my-4 p-8 relative">
 			<div class="flex flex-row">
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z"/></svg>
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z"/></svg>
@@ -136,36 +137,21 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z"/></svg>
 			</div>
 			<p>Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
-			<span>- Volmer Hansen, Lukkertiden.dk </span>
+			<span class="italic ">- Volmer Hansen, Lukkertiden.dk </span>
 		</div>
 	</div>
 </section>
 
-<section class="max-w-7xl mx-auto p-8">
-	<h1>Billeder fra bogen</h1>
-
-	<!-- <div class="grid grid-cols-4">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-	</div> -->
+<section class="section6 max-w-7xl mx-auto p-8">
+	<h1 class="text-2xl mb-4">Billeder fra bogen</h1>
 
 	<div class="grid grid-cols-4 ">
 		{
 			images.map(({ src }) => (
-			<div class="">
+			<div class="overflow-hidden">
 				<img
 					src={src}
-					class="mb-4 w-48 h-48 object-cover"
+					class="mb-4 w-48 h-48 object-cover transition-all hover:scale-105"
 					alt=""
 					loading="lazy"
 				/>
@@ -174,32 +160,30 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 		}
 		</div>
 </section>
-
 	
-<section class=" max-w-7xl mx-auto grid lg:grid-cols-2 p-8">
-<div >
-
-	<img class="w-80" src="/src/assets/images/billeder/sten_simons.jpg" alt="">
+<section class="section7 max-w-7xl mx-auto grid md:grid-cols-2 p-8">
+<div class="lg:ml-56" >
+	<img class="md:w-54 lg:w-80 " src="/src/assets/images/billeder/sten_simons.jpg" alt="">
 </div>
-<div>
-	<h1>Forfatteren</h1>
-		<p>Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00´erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
+<div class="">
+	<h1 class="text-2xl mb-4">Forfatteren</h1>
+		<p class="w-96">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00´erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.” <br>
 			Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.
 		</p>
 </div>
 </section>
 
-<section class="max-w-7xl mx-auto flex justify-center">
-	<h1> Køb bogen nu!</h1>
-	<form action=""  class=" w-9/12 gap-6 mt-8 max-w-md">
+<section class=" section8 mx-auto flex flex-col lg:flex-row lg:justify-center gap-8 p-6 rounded-md">
+	<form action=""  class="sm:max-w-full gap-6 mt-8 lg:w-1/3 space-y-6">
+		<h1 class="text-2xl mb-4"> Køb bogen nu!</h1>
 		<div class="block">
 			<label for="antal">Antal:</label>
-			<input type="number" id="antal" placeholder="1" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+			<input type="number" id="antal" placeholder="1" class="mt-1 block w-full rounded-md bg-white border-transparent  hover:bg-blue-100 focus:border-gray-500 focus:bg-white focus:ring-0">
 		</div>
 
 		<div class="block">
 			<span>Levering:</span>
-			<input type="radio" id="postnord" name="levering" checked class="appearance-none checked:bg-pink-500">
+			<input type="radio" id="postnord" name="levering" checked class="appearance-none checked:bg-blue-500">
 			<label for="postnord">Postnord</label>
 			<input type="radio" id="afhent" name="levering">
 			<label for="afhent">Afhent selv</label>
@@ -207,38 +191,90 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 
 		<div class="block">
 			<label for="navn">Navn:</label>
-			<input type="text" id="navn" placeholder="Anders And" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+			<input type="text" id="navn" placeholder="Anders And" class="mt-1 block w-full rounded-md bg-white border-transparent hover:bg-blue-100 focus:border-gray-500 focus:bg-white focus:ring-0">
 		</div>
 
 		<div class="block">
 			<label for="adresse">Adresse</label>
-			<input type="text" id="adresse" placeholder="Paradisæblevej 8" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+			<input type="text" id="adresse" placeholder="Paradisæblevej 8" class="mt-1 block w-full rounded-md bg-white border-transparent  hover:bg-blue-100 focus:border-gray-500 focus:bg-white focus:ring-0">
 		</div>
 		<div class="block">
 			<label for="email">Email:</label>
-			<input type="email" id="email" placeholder="E-mail" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+			<input type="email" id="email" placeholder="E-mail" class="mt-1 block w-full rounded-md bg-white border-transparent  hover:bg-blue-100 focus:border-gray-500 focus:bg-white focus:ring-0">
 		</div>
 
 		<div class="block">
 			<label for="by" for="postnummer">Postnummer og by</label>
-			<input type="text" id="postnummer" placeholder="0900" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
-			<input type="text" id="by" placeholder="Andeby" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+			<input type="text" id="postnummer" placeholder="0900" class="mt-1 block w-full rounded-md bg-white border-transparent  hover:bg-blue-100 focus:border-gray-500 focus:bg-white focus:ring-0">
+			<input type="text" id="by" placeholder="Andeby" class="mt-1 block w-full rounded-md bg-white border-transparent  hover:bg-blue-100 focus:border-gray-500 focus:bg-white focus:ring-0">
 		</div>
 
 		<div class="block">
 			<label for="telefon">Telefon:</label>
-			<input type="tel" id="telefon" placeholder="555-555" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent  hover:bg-red-50 focus:border-gray-500 focus:bg-white focus:ring-0">
+			<input type="tel" id="telefon" placeholder="555-555" class="mt-1 block w-full rounded-md bg-white border-transparent  hover:bg-blue-100 focus:border-gray-500 focus:bg-white focus:ring-0">
 		</div>
 
 		<div class="block">
-			<input type="checkbox" class="rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-gray-700  hover:bg-red-50 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500">
+			<input type="checkbox" class="rounded bg-white border-transparent focus:border-transparent focus:bg-gray-200 text-gray-700  hover:bg-blue-100 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500">
 			<span>Ja tak til nyhedsbreve og tilbud</span>
 		</div>
 
 		<div class="block">
-			<Button type="sumbit" variant="primary" size="small">Køb bog</Button>
+			<Button type="sumbit" variant="primary" size="small">Bestil</Button>
 		</div>
 	</form>
 </section>
 
 </MainLayout>
+
+<script>
+	import { inView } from "motion";
+
+	const inviewelement = document.querySelector(".section1");
+	inView(
+		inviewelement , () => {
+			inviewelement.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement1 = document.querySelector(".section2");
+	inView(
+		inviewelement1 , () => {
+			inviewelement1.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+		
+		const inviewelement2 = document.querySelector(".section3");
+	inView(
+		inviewelement2 , () => {
+			inviewelement2.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+
+		const inviewelement3 = document.querySelector(".section4");
+	inView(
+		inviewelement3 , () => {
+			inviewelement3.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+
+		const inviewelement4 = document.querySelector(".section5");
+	inView(
+		inviewelement4 , () => {
+			inviewelement4.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement5 = document.querySelector(".section6");
+	inView(
+		inviewelement5 , () => {
+			inviewelement5.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+		
+		const inviewelement6 = document.querySelector(".section7");
+	inView(
+		inviewelement6 , () => {
+			inviewelement6.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+
+		const inviewelement7 = document.querySelector(".section8");
+	inView(
+		inviewelement7 , () => {
+			inviewelement7.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+</script>
