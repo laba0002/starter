@@ -4,6 +4,7 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import 'animate.css';
+import stemningsBillede from '../../images/billeder/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg';
 
 const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files => {
   return files.map(file => file.default);
@@ -11,7 +12,7 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 ---
 <MainLayout title="Titel">
 	<section class="grid md:grid-cols-5 p-8 relative section1">
-		<img src="/src/assets/images/billeder/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg" alt="" class="col-span-3">
+		<img src={stemningsBillede} alt="" class="col-span-3">
 	<div class="col-span-2 grid content-center md:ml-6">
 		<h1 class=" text-xl mb-4 lg:text-5xl">Københavnerbilleder - en guide til hipster foto</h1>
 		<span class="mb-4 italic">af Sten Simons</span>
