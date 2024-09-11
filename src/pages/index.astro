@@ -5,6 +5,10 @@ import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import 'animate.css';
 import stemningsBillede from '../../images/billeder/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg';
+import bogBillede1 from '/../../images/billeder/kobenhavnerbilleder_oppefra.jpg'
+import bogBillede2 from '/../../images/billeder/kobenhavnerbilleder_aaben_venstre.jpg'
+import bogBillede3 from '/../../images/billeder/kobenhavnerbilleder-sten-simons.jpg'
+import portrait from '/../../images/billeder/sten-simons.jpg'
 
 const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files => {
   return files.map(file => file.default);
@@ -40,15 +44,15 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 
 <section class="grid grid-cols-3 p-8 max-w-7xl mx-auto section3">
 	<div>
-		<img src="/src/assets/images/billeder/kobenhavnerbilleder_oppefra.jpg" alt="">
+		<Image>src={bogBillede1}</Image>
 	</div>
 	
 	<div>
-		<img src="/src/assets/images/billeder/kobenhavnerbilleder_aaben_venstre.jpg" alt="">
+		<Image>src={bogBillede2}</Image>
 	</div>
 
 	<div>
-		<img src="/src/assets/images/billeder/kobenhavnerbilleder-sten-simons.jpg" alt="">
+		<Image>src={bogBillede3}</Image>
 	</div>
 </section>
 
@@ -164,7 +168,7 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 	
 <section class="section7 max-w-7xl mx-auto grid md:grid-cols-2 p-8">
 <div class="lg:ml-56" >
-	<img class="md:w-54 lg:w-80 " src="/src/assets/images/billeder/sten_simons.jpg" alt="">
+	<Image>src={portait}</Image>
 </div>
 <div class="">
 	<h1 class="text-2xl mb-4">Forfatteren</h1>
