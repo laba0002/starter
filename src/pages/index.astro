@@ -4,6 +4,13 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import 'animate.css';
+import stemningsBillede from '../../images/billeder/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg';
+import bogBillede1 from '../../images/billeder/kobenhavnerbilleder_oppefra.jpg';
+import bogBillede2 from '../../images/billeder/kobenhavnerbilleder_aaben_venstre.jpg';
+import bogBillede3 from '../../images/billeder/kobenhavnerbilleder-sten-simons.jpg';
+import portrait from '../../images/billeder/sten-simons.jpg';
+
+
 
 const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files => {
   return files.map(file => file.default);
@@ -11,7 +18,7 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 ---
 <MainLayout title="Titel">
 	<section class="grid md:grid-cols-5 p-8 relative section1">
-<img class="col-span-3" src="../public/billeder/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg" alt="stemningsbillede">
+<Image> src={stemningsBillede}>
 	<div class="col-span-2 grid content-center md:ml-6">
 		<h1 class=" text-xl mb-4 lg:text-5xl">Københavnerbilleder - en guide til hipster foto</h1>
 		<span class="mb-4 italic">af Sten Simons</span>
@@ -39,15 +46,15 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 
 <section class="grid grid-cols-3 p-8 max-w-7xl mx-auto section3">
 	<div>
-		<img src="../public//billeder/kobenhavnerbilleder_oppefra.jpg" alt="">
+		<Image src={bogBillede1}/>
 	</div>
 	
 	<div>
-		<img src="../public//billeder/kobenhavnerbilleder_aaben_venstre.jpg" alt="">
+		<Image src={bogBillede2}/>
 	</div>
 
 	<div>
-		<img src="../public//billeder/kobenhavnerbilleder-sten-simons.jpg" alt="">
+		<Image src={bogBillede3}/>
 	</div>
 </section>
 
@@ -163,7 +170,7 @@ const images = await Astro.glob("/src/assets/images/bogbilleder/*").then(files =
 	
 <section class="section7 max-w-7xl mx-auto grid md:grid-cols-2 p-8">
 <div class="lg:ml-56" >
-	<img class="md:w-54 lg:w-80 " src="../public//billeder/sten_simons.jpg" alt="">
+	<Image class="md:w-54 lg:w-80 " src={portrait}/>
 </div>
 <div class="">
 	<h1 class="text-2xl mb-4">Forfatteren</h1>
